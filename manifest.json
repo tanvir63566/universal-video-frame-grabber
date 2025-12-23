@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Universal Video Frame Grabber",
+  "version": "10.2",
+  "description": "Extract frames from any video on the web.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
